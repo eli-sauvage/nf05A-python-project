@@ -1,0 +1,78 @@
+\hypertarget{server_8py}{}\doxysection{server.\+py File Reference}
+\label{server_8py}\index{server.py@{server.py}}
+
+
+This file allows the user to interact with the main file (database) throught a website.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classserver_1_1_serv}{server.\+Serv}}
+\begin{DoxyCompactList}\small\item\em This is the main Class using the http.\+server package. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{server_8py_aaacb4aa55af34968b1010b04341336b5}{server.\+new\+Memb}} (memb)
+\begin{DoxyCompactList}\small\item\em adds a new member to the database \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{server_8py_a5cbdb60255538545321cbb5fb515f328}{server.\+edit\+User}} (user)
+\begin{DoxyCompactList}\small\item\em edit a member to the database \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{server_8py_aad5ab7ac867e830023889f493726e9b9}\label{server_8py_aad5ab7ac867e830023889f493726e9b9}} 
+{\bfseries server.\+httpd} = HTTPServer((\textquotesingle{}127.\+0.\+0.\+1\textquotesingle{},8080),Serv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file allows the user to interact with the main file (database) throught a website. 
+
+\begin{DoxyAuthor}{Author}
+THARAUD Valentin \& SAUVAGE Eli 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/06/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{server_8py_a5cbdb60255538545321cbb5fb515f328}\label{server_8py_a5cbdb60255538545321cbb5fb515f328}} 
+\index{server.py@{server.py}!editUser@{editUser}}
+\index{editUser@{editUser}!server.py@{server.py}}
+\doxysubsubsection{\texorpdfstring{editUser()}{editUser()}}
+{\footnotesize\ttfamily def server.\+edit\+User (\begin{DoxyParamCaption}\item[{}]{user }\end{DoxyParamCaption})}
+
+
+
+edit a member to the database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memb} & dictionnary with the names of the fields of the html form as keys \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{server_8py_aaacb4aa55af34968b1010b04341336b5}\label{server_8py_aaacb4aa55af34968b1010b04341336b5}} 
+\index{server.py@{server.py}!newMemb@{newMemb}}
+\index{newMemb@{newMemb}!server.py@{server.py}}
+\doxysubsubsection{\texorpdfstring{newMemb()}{newMemb()}}
+{\footnotesize\ttfamily def server.\+new\+Memb (\begin{DoxyParamCaption}\item[{}]{memb }\end{DoxyParamCaption})}
+
+
+
+adds a new member to the database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memb} & dictionnary with the names of the fields of the html form as keys \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if user created, False is pseudo already taken 
+\end{DoxyReturn}

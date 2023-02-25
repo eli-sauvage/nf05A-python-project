@@ -1,0 +1,426 @@
+\hypertarget{database_8py}{}\doxysection{database.\+py File Reference}
+\label{database_8py}\index{database.py@{database.py}}
+
+
+This file allows us to store and edit all the informations of the users.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdatabase_1_1_user}{database.\+User}}
+\begin{DoxyCompactList}\small\item\em Each user of the database will we a type \mbox{\hyperlink{classdatabase_1_1_user}{User}} variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{database_8py_ac1cf60f9a980ad9cad7fc93be7847495}{database.\+load}} ()
+\begin{DoxyCompactList}\small\item\em loads the informations from the save file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{database_8py_a0e8e92ee1096450c97b38abf44a98333}\label{database_8py_a0e8e92ee1096450c97b38abf44a98333}} 
+def \mbox{\hyperlink{database_8py_a0e8e92ee1096450c97b38abf44a98333}{database.\+save}} ()
+\begin{DoxyCompactList}\small\item\em Save the information in a file. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a2d41979b20ed6afb78e9acd2993b908f}{database.\+Find\+Username}} (username)
+\begin{DoxyCompactList}\small\item\em This function return the \mbox{\hyperlink{classdatabase_1_1_user}{User}} with the corresponding username. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_ada79e9cfbb408a9ee298ce6a84708f07}{database.\+Find\+Name}} (name)
+\begin{DoxyCompactList}\small\item\em This function return all the Users with the corresponding name in a list. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a946336033fc78a8aee0f31f6e054c7e7}{database.\+Find\+Field}} (field)
+\begin{DoxyCompactList}\small\item\em This function return all the Users with the corresponding field of study in a list. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a27ae5291182a406b93334ace9ab97ea2}{database.\+Find\+Year}} (year)
+\begin{DoxyCompactList}\small\item\em This function return all the Users with the corresponding year of study in a list. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_ab071e597816002b0d11e6cecfaf4c212}{database.\+Find\+Area}} (area)
+\begin{DoxyCompactList}\small\item\em This function return all the Users with the corresponding areas of interst in a list. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a407bf232951f278e87f130d1f2f26f3d}{database.\+Addto\+Global}} (user)
+\begin{DoxyCompactList}\small\item\em This function add an user to the dictionary Global\+List in the good section depending on the first letter of his name. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a82f37bd16a23e7f920e827017c52fa93}{database.\+Check\+For\+Pseudo}} (username)
+\begin{DoxyCompactList}\small\item\em This function check if an username is already taken (return false if it is) \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a82e91acfe001ea5aa0e66b96b4f81b3c}{database.\+Create\+User}} (pseudo, name, age=None, year=None, field=None, city=None, areaofinterests=\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em this function initialyze an user, with all his information (only a unique pseudo and a name are needed) it also add it to the globallist and save the information in a the file \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_aa3c3e087a4a7e85084a306b403534a99}{database.\+Uppdate\+User}} (username, New\+Name=\char`\"{}none\char`\"{}, New\+Age=0, New\+Year=0, New\+Field=\char`\"{}none\char`\"{}, New\+Pseudo=\char`\"{}none\char`\"{}, New\+City=\char`\"{}none\char`\"{}, New\+Areas=None)
+\begin{DoxyCompactList}\small\item\em This function Update an user, we need to enter his username and we can uppdate every information it saves the information in a file at the end. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_ad51cef949be295b8e75b8aabdfd8883d}{database.\+Delete\+User}} (username)
+\begin{DoxyCompactList}\small\item\em This function delete an user from globallist (it delete the user and all his information but it also search all the people following him and erase him from their list) it also erase his username from the pseudo list. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_ae57c30fd477739d43b85568274d00f3c}{database.\+every\+User}} ()
+\begin{DoxyCompactList}\small\item\em this function return a list of evry user of the global\+List without sorting them by letter in a dictionary \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a872cfa693953a9e9ea370db61b810347}{database.\+Follow}} (username, usernametofollow)
+\begin{DoxyCompactList}\small\item\em this function add an user to the follower list of an other just by entering their usernames \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a65e095c4dc1f9510d896141ce6d801b3}{database.\+Un\+Follow}} (username, usernametounfollow)
+\begin{DoxyCompactList}\small\item\em this function delete an user of the follower list of an other just by entering their usernames \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a76aeaf48640d7743b60d40eddee03e6d}{database.\+Return\+Follower}} (username)
+\begin{DoxyCompactList}\small\item\em this function return all the followers of an user in a list \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a8a8e75d3e609fc11d2cc85e75c6d1ac1}{database.\+Search\+For\+User}} (searchfor)
+\begin{DoxyCompactList}\small\item\em This foncion call \mbox{\hyperlink{database_8py_ab071e597816002b0d11e6cecfaf4c212}{Find\+Area()}}, \mbox{\hyperlink{database_8py_a946336033fc78a8aee0f31f6e054c7e7}{Find\+Field()}}, \mbox{\hyperlink{database_8py_a2d41979b20ed6afb78e9acd2993b908f}{Find\+Username()}}, \mbox{\hyperlink{database_8py_ada79e9cfbb408a9ee298ce6a84708f07}{Find\+Name()}} and \mbox{\hyperlink{database_8py_a27ae5291182a406b93334ace9ab97ea2}{Find\+Year()}} and search in all the user who correspond to what we are searching. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a21937b0b185d4ffb2220b5f50ab333d3}{database.\+Suggestion\+Sharedfollowers}} (username)
+\begin{DoxyCompactList}\small\item\em this function first search for all the followers of an USER then search for all the user that the USER followers follow, then it attibutes a score for evry USER followers followers. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a141e57c6149da0c2dd91642d8dbba0a5}{database.\+Area\+Suggestion}} (username)
+\begin{DoxyCompactList}\small\item\em this function attribute a score for each user depending on how many areas of interest corespond to the area of the user we input, rach area in common is a point, it return a list a list(off all the list) of list(with a user and his score) \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_a8013d0ed0c6356e9bf1d68b74399f9e4}{database.\+Suggestion}} (username)
+\begin{DoxyCompactList}\small\item\em this function first search for all the followers of an USER then search for all the user that the USER followers follow, then it attibutes a score for evry USER followers followers. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{database_8py_acc8d6ba5936e708a10dfee6a84632520}{database.\+Return\+Follow}} (username)
+\begin{DoxyCompactList}\small\item\em this function return all the people that follow an user in a list \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{database_8py_a94e22e63cc5268fa91b5f06ab5f966a2}\label{database_8py_a94e22e63cc5268fa91b5f06ab5f966a2}} 
+string {\bfseries database.\+filename} = \textquotesingle{}save.\+pkl\textquotesingle{}
+\item 
+\mbox{\Hypertarget{database_8py_ac6c755a3a99fddbf8f682e4a8245e32f}\label{database_8py_ac6c755a3a99fddbf8f682e4a8245e32f}} 
+def {\bfseries database.\+content} = load()
+\item 
+\mbox{\Hypertarget{database_8py_aa7b30c4115ec233e87351fcff53e8a51}\label{database_8py_aa7b30c4115ec233e87351fcff53e8a51}} 
+def {\bfseries database.\+Global\+List} = content\mbox{[}\char`\"{}Global\+List\char`\"{}\mbox{]}
+\item 
+\mbox{\Hypertarget{database_8py_a19bc4fc5fcb033682eb6b77d106a203c}\label{database_8py_a19bc4fc5fcb033682eb6b77d106a203c}} 
+def {\bfseries database.\+Listof\+Username} = content\mbox{[}\char`\"{}Listof\+Username\char`\"{}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file allows us to store and edit all the informations of the users. 
+
+\begin{DoxyAuthor}{Author}
+THARAUD Valentin \& SAUVAGE Eli 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/06/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{database_8py_a407bf232951f278e87f130d1f2f26f3d}\label{database_8py_a407bf232951f278e87f130d1f2f26f3d}} 
+\index{database.py@{database.py}!AddtoGlobal@{AddtoGlobal}}
+\index{AddtoGlobal@{AddtoGlobal}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{AddtoGlobal()}{AddtoGlobal()}}
+{\footnotesize\ttfamily def database.\+Addto\+Global (\begin{DoxyParamCaption}\item[{}]{user }\end{DoxyParamCaption})}
+
+
+
+This function add an user to the dictionary Global\+List in the good section depending on the first letter of his name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User} & the user type variable we want to add to the Global\+List \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{database_8py_a141e57c6149da0c2dd91642d8dbba0a5}\label{database_8py_a141e57c6149da0c2dd91642d8dbba0a5}} 
+\index{database.py@{database.py}!AreaSuggestion@{AreaSuggestion}}
+\index{AreaSuggestion@{AreaSuggestion}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{AreaSuggestion()}{AreaSuggestion()}}
+{\footnotesize\ttfamily def database.\+Area\+Suggestion (\begin{DoxyParamCaption}\item[{}]{username }\end{DoxyParamCaption})}
+
+
+
+this function attribute a score for each user depending on how many areas of interest corespond to the area of the user we input, rach area in common is a point, it return a list a list(off all the list) of list(with a user and his score) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & the username of the user we want the suggestion for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list of list of the user with their score 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_a82f37bd16a23e7f920e827017c52fa93}\label{database_8py_a82f37bd16a23e7f920e827017c52fa93}} 
+\index{database.py@{database.py}!CheckForPseudo@{CheckForPseudo}}
+\index{CheckForPseudo@{CheckForPseudo}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{CheckForPseudo()}{CheckForPseudo()}}
+{\footnotesize\ttfamily def database.\+Check\+For\+Pseudo (\begin{DoxyParamCaption}\item[{}]{username }\end{DoxyParamCaption})}
+
+
+
+This function check if an username is already taken (return false if it is) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Username} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the username does not exist 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_a82e91acfe001ea5aa0e66b96b4f81b3c}\label{database_8py_a82e91acfe001ea5aa0e66b96b4f81b3c}} 
+\index{database.py@{database.py}!CreateUser@{CreateUser}}
+\index{CreateUser@{CreateUser}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{CreateUser()}{CreateUser()}}
+{\footnotesize\ttfamily def database.\+Create\+User (\begin{DoxyParamCaption}\item[{}]{pseudo,  }\item[{}]{name,  }\item[{}]{age = {\ttfamily None},  }\item[{}]{year = {\ttfamily None},  }\item[{}]{field = {\ttfamily None},  }\item[{}]{city = {\ttfamily None},  }\item[{}]{areaofinterests = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+
+
+this function initialyze an user, with all his information (only a unique pseudo and a name are needed) it also add it to the globallist and save the information in a the file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pseudo,name,age,year,field,city,areaofinterests} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or False depending on if the user as been created or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_ad51cef949be295b8e75b8aabdfd8883d}\label{database_8py_ad51cef949be295b8e75b8aabdfd8883d}} 
+\index{database.py@{database.py}!DeleteUser@{DeleteUser}}
+\index{DeleteUser@{DeleteUser}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{DeleteUser()}{DeleteUser()}}
+{\footnotesize\ttfamily def database.\+Delete\+User (\begin{DoxyParamCaption}\item[{}]{username }\end{DoxyParamCaption})}
+
+
+
+This function delete an user from globallist (it delete the user and all his information but it also search all the people following him and erase him from their list) it also erase his username from the pseudo list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Username} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{database_8py_ae57c30fd477739d43b85568274d00f3c}\label{database_8py_ae57c30fd477739d43b85568274d00f3c}} 
+\index{database.py@{database.py}!everyUser@{everyUser}}
+\index{everyUser@{everyUser}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{everyUser()}{everyUser()}}
+{\footnotesize\ttfamily def database.\+every\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function return a list of evry user of the global\+List without sorting them by letter in a dictionary 
+
+\begin{DoxyReturn}{Returns}
+a list with every user in the database 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_ab071e597816002b0d11e6cecfaf4c212}\label{database_8py_ab071e597816002b0d11e6cecfaf4c212}} 
+\index{database.py@{database.py}!FindArea@{FindArea}}
+\index{FindArea@{FindArea}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{FindArea()}{FindArea()}}
+{\footnotesize\ttfamily def database.\+Find\+Area (\begin{DoxyParamCaption}\item[{}]{area }\end{DoxyParamCaption})}
+
+
+
+This function return all the Users with the corresponding areas of interst in a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em area} & list of area of interst of the users we search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Users with the corresponding areas of interst 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_a946336033fc78a8aee0f31f6e054c7e7}\label{database_8py_a946336033fc78a8aee0f31f6e054c7e7}} 
+\index{database.py@{database.py}!FindField@{FindField}}
+\index{FindField@{FindField}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{FindField()}{FindField()}}
+{\footnotesize\ttfamily def database.\+Find\+Field (\begin{DoxyParamCaption}\item[{}]{field }\end{DoxyParamCaption})}
+
+
+
+This function return all the Users with the corresponding field of study in a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Field} & field of study of the users we search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of Users with the corresponding field of study 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_ada79e9cfbb408a9ee298ce6a84708f07}\label{database_8py_ada79e9cfbb408a9ee298ce6a84708f07}} 
+\index{database.py@{database.py}!FindName@{FindName}}
+\index{FindName@{FindName}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{FindName()}{FindName()}}
+{\footnotesize\ttfamily def database.\+Find\+Name (\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+This function return all the Users with the corresponding name in a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of the users we search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of Users with the corresponding name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_a2d41979b20ed6afb78e9acd2993b908f}\label{database_8py_a2d41979b20ed6afb78e9acd2993b908f}} 
+\index{database.py@{database.py}!FindUsername@{FindUsername}}
+\index{FindUsername@{FindUsername}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{FindUsername()}{FindUsername()}}
+{\footnotesize\ttfamily def database.\+Find\+Username (\begin{DoxyParamCaption}\item[{}]{username }\end{DoxyParamCaption})}
+
+
+
+This function return the User with the corresponding username. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Username} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The User with the corresponding username 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_a27ae5291182a406b93334ace9ab97ea2}\label{database_8py_a27ae5291182a406b93334ace9ab97ea2}} 
+\index{database.py@{database.py}!FindYear@{FindYear}}
+\index{FindYear@{FindYear}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{FindYear()}{FindYear()}}
+{\footnotesize\ttfamily def database.\+Find\+Year (\begin{DoxyParamCaption}\item[{}]{year }\end{DoxyParamCaption})}
+
+
+
+This function return all the Users with the corresponding year of study in a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Year} & year of study of the users we search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of Users with the corresponding year of study 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_a872cfa693953a9e9ea370db61b810347}\label{database_8py_a872cfa693953a9e9ea370db61b810347}} 
+\index{database.py@{database.py}!Follow@{Follow}}
+\index{Follow@{Follow}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{Follow()}{Follow()}}
+{\footnotesize\ttfamily def database.\+Follow (\begin{DoxyParamCaption}\item[{}]{username,  }\item[{}]{usernametofollow }\end{DoxyParamCaption})}
+
+
+
+this function add an user to the follower list of an other just by entering their usernames 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Username,Usernametofollow} & The username of the user who will follow the user who correspond to the usernametofollow \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the user Usernametofollow is already in the follower of the user 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_ac1cf60f9a980ad9cad7fc93be7847495}\label{database_8py_ac1cf60f9a980ad9cad7fc93be7847495}} 
+\index{database.py@{database.py}!load@{load}}
+\index{load@{load}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily def database.\+load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+loads the informations from the save file 
+
+\begin{DoxyReturn}{Returns}
+the dict stored in the file (basically the database ordered by the first letter as asked) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_acc8d6ba5936e708a10dfee6a84632520}\label{database_8py_acc8d6ba5936e708a10dfee6a84632520}} 
+\index{database.py@{database.py}!ReturnFollow@{ReturnFollow}}
+\index{ReturnFollow@{ReturnFollow}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{ReturnFollow()}{ReturnFollow()}}
+{\footnotesize\ttfamily def database.\+Return\+Follow (\begin{DoxyParamCaption}\item[{}]{username }\end{DoxyParamCaption})}
+
+
+
+this function return all the people that follow an user in a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & the username of the user we want the list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{database_8py_a76aeaf48640d7743b60d40eddee03e6d}\label{database_8py_a76aeaf48640d7743b60d40eddee03e6d}} 
+\index{database.py@{database.py}!ReturnFollower@{ReturnFollower}}
+\index{ReturnFollower@{ReturnFollower}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{ReturnFollower()}{ReturnFollower()}}
+{\footnotesize\ttfamily def database.\+Return\+Follower (\begin{DoxyParamCaption}\item[{}]{username }\end{DoxyParamCaption})}
+
+
+
+this function return all the followers of an user in a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & the username of the user we want the list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{database_8py_a8a8e75d3e609fc11d2cc85e75c6d1ac1}\label{database_8py_a8a8e75d3e609fc11d2cc85e75c6d1ac1}} 
+\index{database.py@{database.py}!SearchForUser@{SearchForUser}}
+\index{SearchForUser@{SearchForUser}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{SearchForUser()}{SearchForUser()}}
+{\footnotesize\ttfamily def database.\+Search\+For\+User (\begin{DoxyParamCaption}\item[{}]{searchfor }\end{DoxyParamCaption})}
+
+
+
+This foncion call \mbox{\hyperlink{database_8py_ab071e597816002b0d11e6cecfaf4c212}{Find\+Area()}}, \mbox{\hyperlink{database_8py_a946336033fc78a8aee0f31f6e054c7e7}{Find\+Field()}}, \mbox{\hyperlink{database_8py_a2d41979b20ed6afb78e9acd2993b908f}{Find\+Username()}}, \mbox{\hyperlink{database_8py_ada79e9cfbb408a9ee298ce6a84708f07}{Find\+Name()}} and \mbox{\hyperlink{database_8py_a27ae5291182a406b93334ace9ab97ea2}{Find\+Year()}} and search in all the user who correspond to what we are searching. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em searchfor} & the keyword you want to research \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list of user corresponding 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_a8013d0ed0c6356e9bf1d68b74399f9e4}\label{database_8py_a8013d0ed0c6356e9bf1d68b74399f9e4}} 
+\index{database.py@{database.py}!Suggestion@{Suggestion}}
+\index{Suggestion@{Suggestion}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{Suggestion()}{Suggestion()}}
+{\footnotesize\ttfamily def database.\+Suggestion (\begin{DoxyParamCaption}\item[{}]{username }\end{DoxyParamCaption})}
+
+
+
+this function first search for all the followers of an USER then search for all the user that the USER followers follow, then it attibutes a score for evry USER followers followers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & the username of the user we want the suggestion for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list of the five users we suggest 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_a21937b0b185d4ffb2220b5f50ab333d3}\label{database_8py_a21937b0b185d4ffb2220b5f50ab333d3}} 
+\index{database.py@{database.py}!SuggestionSharedfollowers@{SuggestionSharedfollowers}}
+\index{SuggestionSharedfollowers@{SuggestionSharedfollowers}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{SuggestionSharedfollowers()}{SuggestionSharedfollowers()}}
+{\footnotesize\ttfamily def database.\+Suggestion\+Sharedfollowers (\begin{DoxyParamCaption}\item[{}]{username }\end{DoxyParamCaption})}
+
+
+
+this function first search for all the followers of an USER then search for all the user that the USER followers follow, then it attibutes a score for evry USER followers followers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & the username of the user we want the suggestion for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list of list of the user with their score 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_a65e095c4dc1f9510d896141ce6d801b3}\label{database_8py_a65e095c4dc1f9510d896141ce6d801b3}} 
+\index{database.py@{database.py}!UnFollow@{UnFollow}}
+\index{UnFollow@{UnFollow}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{UnFollow()}{UnFollow()}}
+{\footnotesize\ttfamily def database.\+Un\+Follow (\begin{DoxyParamCaption}\item[{}]{username,  }\item[{}]{usernametounfollow }\end{DoxyParamCaption})}
+
+
+
+this function delete an user of the follower list of an other just by entering their usernames 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Username,usernametounfollow} & The username of the user who will unfollow the user who correspond to the usernametounfollow \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the user usernametounfollow is not in the follower of the user 
+\end{DoxyReturn}
+\mbox{\Hypertarget{database_8py_aa3c3e087a4a7e85084a306b403534a99}\label{database_8py_aa3c3e087a4a7e85084a306b403534a99}} 
+\index{database.py@{database.py}!UppdateUser@{UppdateUser}}
+\index{UppdateUser@{UppdateUser}!database.py@{database.py}}
+\doxysubsubsection{\texorpdfstring{UppdateUser()}{UppdateUser()}}
+{\footnotesize\ttfamily def database.\+Uppdate\+User (\begin{DoxyParamCaption}\item[{}]{username,  }\item[{}]{New\+Name = {\ttfamily \char`\"{}none\char`\"{}},  }\item[{}]{New\+Age = {\ttfamily 0},  }\item[{}]{New\+Year = {\ttfamily 0},  }\item[{}]{New\+Field = {\ttfamily \char`\"{}none\char`\"{}},  }\item[{}]{New\+Pseudo = {\ttfamily \char`\"{}none\char`\"{}},  }\item[{}]{New\+City = {\ttfamily \char`\"{}none\char`\"{}},  }\item[{}]{New\+Areas = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+This function Update an user, we need to enter his username and we can uppdate every information it saves the information in a file at the end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pseudo,name,age,year,field,city,areaofinterests} & \\
+\hline
+\end{DoxyParams}

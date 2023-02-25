@@ -1,0 +1,110 @@
+\hypertarget{classdatabase_1_1_user}{}\doxysection{database.\+User Class Reference}
+\label{classdatabase_1_1_user}\index{database.User@{database.User}}
+
+
+Each user of the database will we a type \mbox{\hyperlink{classdatabase_1_1_user}{User}} variable.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdatabase_1_1_user_a4d25b8fcce4c3ba52a49ec8c4e6f42f2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, name=\char`\"{}none\char`\"{}, age=0, year=0, field=\char`\"{}none\char`\"{}, pseudo=\char`\"{}none\char`\"{}, city=\char`\"{}none\char`\"{})
+\begin{DoxyCompactList}\small\item\em This initialyze the user by default. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdatabase_1_1_user_af68fd9171552fb4b0b12c77d310798a5}{export}} (self)
+\begin{DoxyCompactList}\small\item\em this function is used to transform an object user to a simple dict ~\newline
+ the followers field for example has to be modified to contain only the usernames, because we won\textquotesingle{}t be able to transform it into json otherwise \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classdatabase_1_1_user_ad6aafdac6b422390000b3a6ef1d595c0}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Every user will be saved in the database using his username. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdatabase_1_1_user_a298ba997651d220d73036ae365324a30}\label{classdatabase_1_1_user_a298ba997651d220d73036ae365324a30}} 
+\mbox{\hyperlink{classdatabase_1_1_user_a298ba997651d220d73036ae365324a30}{Name}}
+\begin{DoxyCompactList}\small\item\em the name of the user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdatabase_1_1_user_a0bbe9bebb87a100d90090d7e5b17155c}\label{classdatabase_1_1_user_a0bbe9bebb87a100d90090d7e5b17155c}} 
+\mbox{\hyperlink{classdatabase_1_1_user_a0bbe9bebb87a100d90090d7e5b17155c}{Age}}
+\begin{DoxyCompactList}\small\item\em the age of the user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdatabase_1_1_user_ae7933a620c2ae9556a95d00814cbae9d}\label{classdatabase_1_1_user_ae7933a620c2ae9556a95d00814cbae9d}} 
+\mbox{\hyperlink{classdatabase_1_1_user_ae7933a620c2ae9556a95d00814cbae9d}{Yearof\+Study}}
+\begin{DoxyCompactList}\small\item\em the year of study of the user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdatabase_1_1_user_aee480f8d3e7d7143580f8bc7bf349223}\label{classdatabase_1_1_user_aee480f8d3e7d7143580f8bc7bf349223}} 
+\mbox{\hyperlink{classdatabase_1_1_user_aee480f8d3e7d7143580f8bc7bf349223}{Fieldof\+Study}}
+\begin{DoxyCompactList}\small\item\em the field of study of the user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdatabase_1_1_user_a508d9f5d30114c04e6dca36c2ff028d5}\label{classdatabase_1_1_user_a508d9f5d30114c04e6dca36c2ff028d5}} 
+\mbox{\hyperlink{classdatabase_1_1_user_a508d9f5d30114c04e6dca36c2ff028d5}{Username}}
+\begin{DoxyCompactList}\small\item\em the username of the user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdatabase_1_1_user_a914eadb89c2961adae1f9a7e7cea1550}\label{classdatabase_1_1_user_a914eadb89c2961adae1f9a7e7cea1550}} 
+\mbox{\hyperlink{classdatabase_1_1_user_a914eadb89c2961adae1f9a7e7cea1550}{City}}
+\begin{DoxyCompactList}\small\item\em the city of the user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdatabase_1_1_user_a1f1e533f9444293d8cf51fa51dc57147}\label{classdatabase_1_1_user_a1f1e533f9444293d8cf51fa51dc57147}} 
+\mbox{\hyperlink{classdatabase_1_1_user_a1f1e533f9444293d8cf51fa51dc57147}{Areaofinterests}}
+\begin{DoxyCompactList}\small\item\em a list of the areas of interest of the user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdatabase_1_1_user_abafd76580d96a300f586beaeff2d5e35}\label{classdatabase_1_1_user_abafd76580d96a300f586beaeff2d5e35}} 
+\mbox{\hyperlink{classdatabase_1_1_user_abafd76580d96a300f586beaeff2d5e35}{followers}}
+\begin{DoxyCompactList}\small\item\em ab list of user followed by this user \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Each user of the database will we a type \mbox{\hyperlink{classdatabase_1_1_user}{User}} variable. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdatabase_1_1_user_a4d25b8fcce4c3ba52a49ec8c4e6f42f2}\label{classdatabase_1_1_user_a4d25b8fcce4c3ba52a49ec8c4e6f42f2}} 
+\index{database.User@{database.User}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!database.User@{database.User}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def database.\+User.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name = {\ttfamily \char`\"{}none\char`\"{}},  }\item[{}]{age = {\ttfamily 0},  }\item[{}]{year = {\ttfamily 0},  }\item[{}]{field = {\ttfamily \char`\"{}none\char`\"{}},  }\item[{}]{pseudo = {\ttfamily \char`\"{}none\char`\"{}},  }\item[{}]{city = {\ttfamily \char`\"{}none\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+This initialyze the user by default. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdatabase_1_1_user_ad6aafdac6b422390000b3a6ef1d595c0}\label{classdatabase_1_1_user_ad6aafdac6b422390000b3a6ef1d595c0}} 
+\index{database.User@{database.User}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!database.User@{database.User}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def database.\+User.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Every user will be saved in the database using his username. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the username 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdatabase_1_1_user_af68fd9171552fb4b0b12c77d310798a5}\label{classdatabase_1_1_user_af68fd9171552fb4b0b12c77d310798a5}} 
+\index{database.User@{database.User}!export@{export}}
+\index{export@{export}!database.User@{database.User}}
+\doxysubsubsection{\texorpdfstring{export()}{export()}}
+{\footnotesize\ttfamily def database.\+User.\+export (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+this function is used to transform an object user to a simple dict ~\newline
+ the followers field for example has to be modified to contain only the usernames, because we won\textquotesingle{}t be able to transform it into json otherwise 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a dict with fields that aren\textquotesingle{}t objects (only strings or ints) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{database_8py}{database.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Snapch'UTT</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      label{
+        margin-bottom: 0;
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <!-- <link href="cheatsheet.css" rel="stylesheet"> -->
+  </head>
+  <body class="bg-light" style="padding: 60px 0;">
+    <nav class="navbar navbar-light bg-light fixed-top border-bottom border-dark" style="border-bottom-width: 2px !important;">
+      <a class="navbar-brand">Snapch'UTT</a>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search for a user" aria-label="Search" id="searchBox">
+        <button class="btn btn-outline-success my-2 my-sm-0 refresh" type="button">Search</button>
+      </form>
+    </nav>
+      
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Pseudo</th>
+        <th scope="col">Age</th>
+        <th scope="col">Year</th>
+        <th scope="col">Field</th>
+        <th scope="col">City</th>
+        <th scope="col">Followers</th>
+        <th scope="col">Areas of Interest</th>
+        <th scope="col">Actions</th>
+      </tr>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+    </div>
+    <div class="modal fade" id="listOfUserModal" tabindex="-1" role="dialog" aria-labelledby="listOfUserModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="font-weight:bold;">
+            
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="listOfUserModalLabel" aria-hidden="true" style="z-index: 10000;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="font-weight:bold;">
+          </div>
+          <div class="modal-body">
+            <form action="javascript:void(0);" id="form">
+              <label for="name">name : </label>
+              <input type="text" id="name" name="name"/><br/>
+              <label for="age">age : </label>
+              <input type="number" id="age" name="age"/><br/>
+              <label for="year">year of study : </label>
+              <input type="number" id="year" name="year"/><br/>
+              <label for="field">field of study : </label>
+              <input type="text" id="field" name="field"/><br/>
+              <label for="pseudo">pseudo : </label>
+              <input type="text" id="pseudo" name="pseudo"/><br/>
+              <label for="city">city : </label>
+              <input type="text" id="city" name="city"/><br/>
+              <input type="checkbox" id="sport" name="sport">
+              <label for="sport">sport</label><br/>
+              <input type="checkbox" id="cinema" name="cinema">
+              <label for="cinema">cinema</label><br/>
+              <input type="checkbox" id="art" name="art">
+              <label for="art">art</label><br/>
+              <input type="checkbox" id="health" name="health">
+              <label for="health">health</label><br/>
+              <input type="checkbox" id="technology" name="technology">
+              <label for="technology">technology</label><br/>
+              <input type="checkbox" id="diy" name="diy">
+              <label for="diy">DIY</label><br/>
+              <input type="checkbox" id="cooking" name="cooking">
+              <label for="cooking">cooking</label><br/>
+              <input type="checkbox" id="travel" name="travel">
+              <label for="travel">travel</label><br/>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alert alert-danger collapse" id="errorUserTaken" role="alert" style="position: absolute; top:0; right:0; z-index:10001">
+      This pseudo is already taken.
+    </div>
+    <div class="alert alert-danger collapse" id="errorMissingName" role="alert" style="position: absolute; top:0; right:0; z-index:10001">
+      Missing name or pseudo.
+    </div>
+    <div class="alert alert-danger collapse" id="errorUserNotFound" role="alert" style="position: absolute; top:0; right:0; z-index:10001">
+      User not found.
+    </div>
+    <div class="alert alert-success collapse" id="userCreated" role="alert" style="position: absolute; top:0; right:0; z-index:10001">
+      User successfully created !
+    </div>
+    <div class="alert alert-success collapse" id="userUpdated" role="alert" style="position: absolute; top:0; right:0; z-index:10001">
+      User successfully updated !
+    </div>
+    <nav class="navbar fixed-bottom bg-light border-top border-dark border-5  " style="border-top-width: 2px !important;">
+      <button class="btn btn-primary refresh">refresh</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addUserModal" id="addUser" data-action="addUser">Add User</button>  
+    </nav>
+
+      <script src="js/jquery.min.js"></script>
+      <script src="js/index.js"></script>
+      <script src="js/poper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- <script src="cheatsheet.js"></script> -->
+  </body>
+</html>
